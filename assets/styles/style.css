@@ -9,15 +9,15 @@ TYPOGRAPHY
 *********************/
 @font-face {font-family: 'ManifoldDSA-ExtraBold';src: url('webfonts/ManifoldDSA-ExtraBold.eot');src: url('webfonts/ManifoldDSA-ExtraBold.eot?#iefix') format('embedded-opentype'),url('webfonts/ManifoldDSA-ExtraBold.woff2') format('woff2'),url('webfonts/ManifoldDSA-ExtraBold.woff') format('woff'),url('webfonts/ManifoldDSA-ExtraBold.ttf') format('truetype');}
 
-@font-face {font-family: 'ManifoldDSA-Medium';src: url('webfonts/ManifoldDSA-Medium.eot');src: url('webfonts/ManifoldDSA-Medium.eot?#iefix') format('embedded-opentype'),url('webfonts/ManifoldDSA-Medium.woff2') format('woff2'),url('webfonts/ManifoldDSA-Medium.woff') format('woff'),url('webfonts/ManifoldDSA-Medium.ttf') format('truetype');}
+@font-face {font-family: 'ManifoldDSA-Regular';src: url('webfonts/ManifoldDSA-Regular.eot');src: url('webfonts/ManifoldDSA-Regular.eot?#iefix') format('embedded-opentype'),url('webfonts/ManifoldDSA-Regular.woff2') format('woff2'),url('webfonts/ManifoldDSA-Regular.woff') format('woff'),url('webfonts/ManifoldDSA-Regular.ttf') format('truetype');}
 
 @font-face {font-family: 'ManifoldDSA-Light';src: url('webfonts/ManifoldDSA-Light.eot');src: url('webfonts/ManifoldDSA-Light.eot?#iefix') format('embedded-opentype'),url('webfonts/ManifoldDSA-Light.woff2') format('woff2'),url('webfonts/ManifoldDSA-Light.woff') format('woff'),url('webfonts/ManifoldDSA-Light.ttf') format('truetype');}
 
-header, body, p, h1.txt-medium, h2.txt-medium, h3.txt-medium, h4.txt-medium, h5.txt-medium {font-family: ManifoldDSA-Medium, Helvetica, Tahoma, Sans-Serif;}
+header, body, p, h1.txt-medium, h2.txt-medium, h3.txt-medium, h4.txt-medium, h5.txt-medium {font-family: ManifoldDSA-Regular, Roboto, Helvetica, Tahoma, Sans-Serif;}
 
-h1, h2, h3, h4, h5 {font-family: ManifoldDSA-Light, Helvetica, Tahoma, Sans-Serif;}
+h1, h2, h3, h4, h5 {font-family: ManifoldDSA-ExtraBold, Roboto, Helvetica, Tahoma, Sans-Serif;}
 
-b, strong, h1 small, h2 small, h3 small, h4 small, h5 small, h1.txt-bold, h2.txt-bold, h3.txt-bold, h4.txt-bold, h5.txt-bold {font-family: ManifoldDSA-ExtraBold, Helvetica, Tahoma, Sans-Serif;}
+b, strong, h1 small, h2 small, h3 small, h4 small, h5 small, h1.txt-bold, h2.txt-bold, h3.txt-bold, h4.txt-bold, h5.txt-bold {font-family: ManifoldDSA-ExtraBold, Roboto, Helvetica, Tahoma, Sans-Serif;}
 
 /*********************
 NAVIGATION CHANGES
@@ -76,8 +76,14 @@ body .article-header h1, body .article-header h2, body .article-header h3, body 
 	color: #111;
 }
 
+body .article-header h1 {
+  font-size: 4rem;
+  margin: 3rem 0;
+}
+
 body .entry-content p {
-	color: #7a7a7a;
+	color: #111;
+  font-size: 1.25rem;
 }
 
 
@@ -394,6 +400,9 @@ SIDEBARS & ASIDES
 .sidebar li {
   list-style: none; }
 
+ .widget {
+ 	margin-bottom: 1.5rem; }
+
 .widget ul {
   margin: 0; }
 
@@ -410,11 +419,27 @@ VISUAL EDITOR STYLES
 body#tinymce {
   margin: 20px; }
 
+
+/*********************
+WIDGET STYLES
+*********************/
+.widget.widget_recent_entries ul li a {
+	display: block;
+	border-left: 0.25rem solid #ec1f27;
+	padding-left: 0.25rem;
+	color: #ec1f27;
+}
+
+.widget.widget_recent_entries ul li a:hover {
+	background-color: #23282d;
+}
+
 /*********************
 PLUGIN STYLES
 *********************/
 .gform_body ul {
   list-style: none outside none;
   margin: 0; }
+
 
 /*# sourceMappingURL=style.css.map */
