@@ -11,6 +11,14 @@ get_header(); ?>
 	
 		    <main class="main small-12 large-12 medium-12 cell" role="main">
 				
+				<?php if ( has_post_thumbnail() ) {
+				    the_post_thumbnail( 'page-hero' );
+				}
+				else {
+				    echo '';
+				}
+				?>
+
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 			    	<?php get_template_part( 'parts/loop', 'page' ); ?>

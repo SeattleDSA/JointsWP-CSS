@@ -12,7 +12,7 @@ get_header(); ?>
 		    <main class="main small-12 medium-12 large-12 cell" role="main">
 
 		    	<?php if ( has_post_thumbnail() ) {
-				    the_post_thumbnail( 'large' );
+				    the_post_thumbnail( 'page-hero' );
 				}
 				else {
 				    echo '';
