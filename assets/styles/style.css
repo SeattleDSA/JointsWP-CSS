@@ -3,6 +3,64 @@
 Stylesheet: Global Stylesheet
 
 *************************************************/
+
+/*********************
+TYPOGRAPHY
+*********************/
+@font-face {font-family: 'ManifoldDSA-ExtraBold';src: url('webfonts/ManifoldDSA-ExtraBold.eot');src: url('webfonts/ManifoldDSA-ExtraBold.eot?#iefix') format('embedded-opentype'),url('webfonts/ManifoldDSA-ExtraBold.woff2') format('woff2'),url('webfonts/ManifoldDSA-ExtraBold.woff') format('woff'),url('webfonts/ManifoldDSA-ExtraBold.ttf') format('truetype');}
+
+@font-face {font-family: 'ManifoldDSA-Medium';src: url('webfonts/ManifoldDSA-Medium.eot');src: url('webfonts/ManifoldDSA-Medium.eot?#iefix') format('embedded-opentype'),url('webfonts/ManifoldDSA-Medium.woff2') format('woff2'),url('webfonts/ManifoldDSA-Medium.woff') format('woff'),url('webfonts/ManifoldDSA-Medium.ttf') format('truetype');}
+
+@font-face {font-family: 'ManifoldDSA-Light';src: url('webfonts/ManifoldDSA-Light.eot');src: url('webfonts/ManifoldDSA-Light.eot?#iefix') format('embedded-opentype'),url('webfonts/ManifoldDSA-Light.woff2') format('woff2'),url('webfonts/ManifoldDSA-Light.woff') format('woff'),url('webfonts/ManifoldDSA-Light.ttf') format('truetype');}
+
+header, body, p, h1.txt-medium, h2.txt-medium, h3.txt-medium, h4.txt-medium, h5.txt-medium {font-family: ManifoldDSA-Medium, Helvetica, Tahoma, Sans-Serif;}
+
+h1, h2, h3, h4, h5 {font-family: ManifoldDSA-Light, Helvetica, Tahoma, Sans-Serif;}
+
+b, strong, h1 small, h2 small, h3 small, h4 small, h5 small, h1.txt-bold, h2.txt-bold, h3.txt-bold, h4.txt-bold, h5.txt-bold {font-family: ManifoldDSA-ExtraBold, Helvetica, Tahoma, Sans-Serif;}
+
+/*********************
+NAVIGATION CHANGES
+*********************/
+.logged-in.admin-bar .is-open#off-canvas {
+	padding-top: 46px;
+}
+
+#top-bar-menu, #top-bar-menu ul {
+	background-color: #ec1f27;
+}
+
+#top-bar-menu a {
+	color: white;
+}
+
+#top-bar-menu a:hover {
+	color: black;
+}
+
+@media print, screen and (min-width: 40em) {
+	.dropdown.menu.medium-horizontal>li.is-dropdown-submenu-parent>a::after {
+	    border-color: #fff transparent transparent;
+	}
+}
+
+.menu .active>a {
+	background-color: black;
+}
+
+/*********************
+BUTTON STYLES
+*********************/
+.button {
+	color: white;
+	background-color: #ec1f27;
+}
+
+.button:focus, .button:hover {
+	color: black;
+	background-color: #ec1f27;
+}
+
 /*********************
 POSTS & CONTENT STYLES
 *********************/
@@ -12,6 +70,16 @@ POSTS & CONTENT STYLES
 
 .byline {
   color: #999; }
+
+body .article-header h1, body .article-header h2, body .article-header h3, body .article-header h4, body .article-header h5 {
+	font-family: ManifoldDSA-ExtraBold, Helvetica, Tahoma, Sans-Serif;
+	color: #111;
+}
+
+body .entry-content p {
+	color: #7a7a7a;
+}
+
 
 .entry-content img {
   max-width: 100%;
@@ -76,7 +144,6 @@ POSTS & CONTENT STYLES
   .post-password-form input[type="submit"]:hover, .post-password-form input[type="submit"]:focus {
     background-color: #14679e;
     color: #fefefe; }
-
 /*********************
 IMAGE GALLERY STYLES
 *********************/
