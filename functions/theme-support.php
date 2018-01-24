@@ -9,6 +9,10 @@ function joints_theme_support() {
 	// Default thumbnail size
 	set_post_thumbnail_size(125, 125, true);
 
+	add_image_size( 'page-hero', 1140, 350 ); // 1140 pixels wide by 350 high (widescreen images for pages, if desired)
+	add_image_size( 'post-thumb', 250, 250 ); // 250 pixels wide by 250 high (ideal for social media embed)
+	add_image_size( 'category-thumb', 125, 125 ); // 125 pixels wide by 125 high
+
 	// Add RSS Support
 	add_theme_support( 'automatic-feed-links' );
 	
@@ -49,7 +53,7 @@ function joints_theme_support() {
 	
 	// Set the maximum allowed width for any content in the theme, like oEmbeds and images added to posts.
 	$GLOBALS['content_width'] = apply_filters( 'joints_theme_support', 1200 );	
-	
+
 } /* end theme support */
 
 add_action( 'after_setup_theme', 'joints_theme_support' );
