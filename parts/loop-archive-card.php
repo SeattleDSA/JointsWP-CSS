@@ -19,7 +19,7 @@ $grid_columns = 4; ?>
 			<article id="post-<?php the_ID(); ?>" <?php post_class(''); ?> role="article">
 			
 				<section class="featured-image" itemprop="articleBody">
-					<?php the_post_thumbnail('full'); ?>
+					<a href="<?php the_permalink() ?>" class="archive-post-image" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('full'); ?></a>
 				</section> <!-- end article section -->
 			
 				<header class="article-header">

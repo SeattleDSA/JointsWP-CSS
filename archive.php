@@ -14,7 +14,7 @@ get_header(); ?>
 		    <main class="main small-12 medium-12 large-12 cell" role="main">
 			    
 		    	<header>
-		    		<h1 class="page-title"><?php the_archive_title();?></h1>
+		    		<h1 class="page-title"><?php echo single_cat_title( '', false ); ?></h1>
 					<?php the_archive_description('<div class="taxonomy-description">', '</div>');?>
 		    	</header>
 		

@@ -5,7 +5,5 @@
 ?>
 
 <p class="byline">
-	<?php the_author_posts_link(); ?><br>
-	<?php the_time('F j, Y') ?><br>
-	<?php the_category(', ') ?>
+	By <?php the_author_posts_link(); ?> | <?php the_time('F j, Y') ?>
 </p>	
