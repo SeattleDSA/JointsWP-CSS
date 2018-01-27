@@ -48,6 +48,26 @@ NAVIGATION CHANGES
 	background-color: black;
 }
 
+.off-canvas.is-open {
+	background-color: white;
+}
+
+.off-canvas.is-open .menu.vertical .menu-item {
+	padding: 0 0 0 0.5rem;
+}
+
+.off-canvas.is-open .menu.vertical .menu-item a {
+	color: #ec1f27;
+	border-left: 1px solid #ec1f27;
+	border-bottom: 1px solid #ec1f27;
+	padding: 0 0 0.5rem 0.5rem;
+	margin: 0 0 0.5rem 0;
+}
+
+.accordion-menu .is-accordion-submenu-parent:not(.has-submenu-toggle)>a::after {
+	border-color: #ec1f27 transparent transparent;
+}
+
 /*********************
 BUTTON STYLES
 *********************/
@@ -131,6 +151,30 @@ body .entry-content p {
 	color: #999;
 	border-color: #ddd;
 }
+
+.page-full-width .article-header, .page-no-sidebar .article-header {
+	min-height: 50vh;
+	position: relative;
+}
+
+.page-full-width .article-header .page-title {
+	position: absolute;
+	bottom: 0;
+	color: #fff;
+	width: 100%;
+	padding-top: 10vh;
+	background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75));
+}
+
+.page-no-sidebar .article-header .page-title {
+	position: absolute;
+	bottom: 0;
+	color: #000;
+	width: 100%;
+	padding-top: 20vh;
+	background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+}
+
 
 .entry-content img {
   max-width: 100%;
@@ -457,9 +501,9 @@ ARCHIVE STYLES
 .archive-grid a {
   color: #ec1f27; }
 
-  .archive-grid h3 a {
+.archive-grid h3 a, .archive-index .article-header .article-title a {
   	color: #000;
-  }
+}
 
 .archive-grid article {
 	border-left: 1px solid #ddd;

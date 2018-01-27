@@ -13,7 +13,7 @@ get_header(); ?>
 	
 		<div class="inner-content grid-x grid-margin-x grid-padding-x">
 	
-		    <main class="main small-12 medium-8 large-8 cell" role="main">
+		    <main class="main small-12 medium-8 large-8 cell archive-index" role="main">
 		    
 			    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			 
