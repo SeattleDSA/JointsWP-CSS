@@ -39,6 +39,10 @@ NAVIGATION CHANGES
   background-color: transparent;
 }
 
+#top-bar-menu a.top-bar-site-name, #top-bar-menu a.top-bar-site-name:hover {
+	background-color: transparent;
+}
+
 .menu a.top-bar-logo-link .top-bar-logo, .menu a.top-bar-logo-link .top-bar-logo:hover {
   height: 2.5rem;
   width: auto;
