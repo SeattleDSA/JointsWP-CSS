@@ -8,7 +8,7 @@
  */			
  ?>
 					
-				<footer class="footer" role="contentinfo">
+				<footer class="footer grid-container" role="contentinfo">
 					
 					<div class="inner-footer grid-x grid-margin-x grid-padding-x">
 						

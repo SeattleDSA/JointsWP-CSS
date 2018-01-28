@@ -34,6 +34,17 @@ NAVIGATION CHANGES
 	color: white;
 }
 
+#top-bar-menu a.top-bar-logo-link, #top-bar-menu a.top-bar-logo-link:hover {
+  padding: 0;
+  background-color: transparent;
+}
+
+.menu a.top-bar-logo-link .top-bar-logo, .menu a.top-bar-logo-link .top-bar-logo:hover {
+  height: 2.5rem;
+  width: auto;
+  padding: 0;
+}
+
 #top-bar-menu a:hover {
 	color: #fff;
 	background-color:black;
@@ -46,6 +57,11 @@ NAVIGATION CHANGES
 	.dropdown.menu.medium-horizontal>li.is-dropdown-submenu-parent.active>a::after {
 		border-color: #ec1f27 transparent transparent;
 	}
+	#sidebar1 {
+		margin-top: 80vh;
+		border-left: 1px solid #ddd;
+    	border-top: 1px solid #ddd;
+	}
 }
 
 #top-bar-menu .menu .active > a {
@@ -54,7 +70,7 @@ NAVIGATION CHANGES
 	border-color: #fff transparent transparent;
 }
 
-.off-canvas.is-open .menu .active > a {
+.off-canvas .menu .active > a {
 	background-color: white;
 	color: black;
 }
@@ -72,7 +88,7 @@ NAVIGATION CHANGES
 	color: white;
 }
 
-.off-canvas.is-open {
+.off-canvas {
 	background-color: white;
 }
 
@@ -80,7 +96,7 @@ NAVIGATION CHANGES
 	padding: 0 0 0 0.5rem;
 }
 
-.off-canvas.is-open .menu.vertical .menu-item a {
+.off-canvas .menu.vertical .menu-item a {
 	color: #ec1f27;
 	border-left: 1px solid #ec1f27;
 	border-bottom: 1px solid #ec1f27;
@@ -529,14 +545,14 @@ ARCHIVE STYLES
   	color: #000;
 }
 
-.archive-grid article {
+.archive-grid .cell.panel {
 	border-left: 1px solid #ddd;
 	border-bottom: 1px solid #ddd;
 }
 
 .archive-grid .article-header {
   	margin-bottom: 0;
-  	padding: 0 0.5rem;
+  	padding: 0;
 }
 
 .archive-grid .article-header .byline {
