@@ -35,17 +35,41 @@ NAVIGATION CHANGES
 }
 
 #top-bar-menu a:hover {
-	color: black;
+	color: #fff;
+	background-color:black;
 }
 
 @media print, screen and (min-width: 40em) {
 	.dropdown.menu.medium-horizontal>li.is-dropdown-submenu-parent>a::after {
 	    border-color: #fff transparent transparent;
 	}
+	.dropdown.menu.medium-horizontal>li.is-dropdown-submenu-parent.active>a::after {
+		border-color: #ec1f27 transparent transparent;
+	}
 }
 
-.menu .active>a {
-	background-color: black;
+#top-bar-menu .menu .active > a {
+	background-color: white;
+	color: #ec1f27;
+	border-color: #fff transparent transparent;
+}
+
+.off-canvas.is-open .menu .active > a {
+	background-color: white;
+	color: black;
+}
+
+#top-bar-menu .is-dropdown-submenu {
+	border: 1px solid #ddd;
+}
+
+#top-bar-menu .is-dropdown-submenu a {
+	background-color: white;
+	color: #ec1f27;
+}
+#top-bar-menu .is-dropdown-submenu a:hover {
+	background-color: #ec1f27;
+	color: white;
 }
 
 .off-canvas.is-open {
