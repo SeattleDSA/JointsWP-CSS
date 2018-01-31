@@ -12,6 +12,46 @@ function joints_register_sidebars() {
 	));
 
 	register_sidebar(array(
+		'id' => 'homefeature',
+		'name' => __('Homepage Feature', 'jointswp'),
+		'description' => __('The feature homepage widget.', 'jointswp'),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4 class="widgettitle">',
+		'after_title' => '</h4>',
+	));
+
+	register_sidebar(array(
+		'id' => 'homebar1',
+		'name' => __('Homebar 1', 'jointswp'),
+		'description' => __('The first homebar.', 'jointswp'),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4 class="widgettitle">',
+		'after_title' => '</h4>',
+	));
+
+	register_sidebar(array(
+		'id' => 'homebar2',
+		'name' => __('Homebar 2', 'jointswp'),
+		'description' => __('The second homebar.', 'jointswp'),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4 class="widgettitle">',
+		'after_title' => '</h4>',
+	));
+
+	register_sidebar(array(
+		'id' => 'homebar3',
+		'name' => __('Homebar 3', 'jointswp'),
+		'description' => __('The third homebar.', 'jointswp'),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4 class="widgettitle">',
+		'after_title' => '</h4>',
+	));
+
+	register_sidebar(array(
 		'id' => 'offcanvas',
 		'name' => __('Offcanvas', 'jointswp'),
 		'description' => __('The offcanvas sidebar.', 'jointswp'),

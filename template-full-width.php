@@ -16,7 +16,7 @@ get_header(); ?>
 
 					<article id="post-<?php the_ID(); ?>" <?php post_class(''); ?> role="article" itemscope itemtype="http://schema.org/WebPage">
 						
-						<header class="article-header" style="background-image: url('<?php if ( has_post_thumbnail() ) { the_post_thumbnail_url( 'full' ); } else { echo ''; } ?> ')">
+						<header class="article-header" style="background-image: url('<?php if ( has_post_thumbnail() ) { the_post_thumbnail_url( 'full' ); } else { echo ''; } ?> '); background-size: cover;">
 							<h1 class="page-title"><div class="grid-container"><?php the_title(); ?></div></h1>
 						</header> <!-- end article header -->
 

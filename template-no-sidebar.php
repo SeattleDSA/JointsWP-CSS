@@ -13,7 +13,7 @@ get_header(); ?>
 				
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-					<header class="article-header" style="background-image: url('<?php if ( has_post_thumbnail() ) { the_post_thumbnail_url( 'full' ); } else { echo ''; } ?> ')">
+					<header class="article-header" style="background-image: url('<?php if ( has_post_thumbnail() ) { the_post_thumbnail_url( 'large' ); } else { echo ''; } ?> '); background-size: cover;">
 							<h1 class="page-title"><div class="grid-container"><?php the_title(); ?></div></h1>
 					</header>
 			    	<?php get_template_part( 'parts/loop', 'page-full' ); ?>

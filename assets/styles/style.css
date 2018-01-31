@@ -528,6 +528,30 @@ COMMENT FORM STYLES
   margin: 0 20px 1.1em; }
 
 /*********************
+HOMEPAGE - 1
+*********************/
+#homepage-1.homepage-backdrop {
+  padding: 8rem 0 0 0;
+}
+
+#homepage-1 .homebar {
+  border: 1px solid #ddd;
+  background-color: #fefefe;
+  margin-bottom: -1.5rem;
+}
+
+#homepage-1 .homepage-feature {
+  min-height: 33vh;
+  border: 1px solid #ddd;
+  background-color: #fefefe;
+  margin-bottom: 2rem;
+}
+
+.homepage1 .article-header {
+  margin-top: 4rem;
+}
+
+/*********************
 SIDEBARS & ASIDES
 *********************/
 .sidebar li {
@@ -583,6 +607,10 @@ body#tinymce {
 /*********************
 WIDGET STYLES
 *********************/
+.widget.widget_recent_entries ul {
+  list-style-type: none;
+}
+
 .widget.widget_recent_entries ul li a {
 	display: block;
 	border-left: 1px solid #ec1f27;
