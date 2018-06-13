@@ -5,24 +5,24 @@
  */
 
 // Adjust the amount of rows in the grid
-$grid_columns = 4; ?>
+$grid_columns = 1; ?>
 
 <?php if( 0 === ( $wp_query->current_post  )  % $grid_columns ): ?>
 
-    <div class="grid-x grid-margin-x grid-padding-x archive-grid" data-equalizer> <!--Begin Grid--> 
+    <div class="grid-x grid-margin-x grid-padding-x archive-card"> <!--Begin Grid--> 
 
 <?php endif; ?> 
 
 		<!--Item: -->
-		<div class="small-6 medium-4 large-4 cell panel" data-equalizer-watch>
+		<div class="small-12 cell panel">
 		
-			<article id="post-<?php the_ID(); ?>" <?php post_class(''); ?> role="article">
+			<article id="post-<?php the_ID(); ?>" <?php post_class('grid-x grid-margin-x'); ?> role="article">
 			
-				<section class="featured-image" itemprop="articleBody">
+				<section class="featured-image small-6 medium-4 large-3 cell" itemprop="articleBody">
 					<a href="<?php the_permalink() ?>" class="archive-post-image" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('full'); ?></a>
 				</section> <!-- end article section -->
 			
-				<header class="article-header">
+				<header class="article-header small-6 medium-8 large-9 cell">
 					<h3 class="title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>	
 					<?php get_template_part( 'parts/content', 'archive-byline' ); ?>				
 				</header> <!-- end article header -->	

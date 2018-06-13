@@ -7,17 +7,11 @@ Stylesheet: Global Stylesheet
 /*********************
 TYPOGRAPHY
 *********************/
-@font-face {font-family: 'ManifoldDSA-ExtraBold';src: url('webfonts/ManifoldDSA-ExtraBold.eot');src: url('webfonts/ManifoldDSA-ExtraBold.eot?#iefix') format('embedded-opentype'),url('webfonts/ManifoldDSA-ExtraBold.woff2') format('woff2'),url('webfonts/ManifoldDSA-ExtraBold.woff') format('woff'),url('webfonts/ManifoldDSA-ExtraBold.ttf') format('truetype');}
+header, body, p, h1.txt-medium, h2.txt-medium, h3.txt-medium, h4.txt-medium, h5.txt-medium {font-family: Roboto, Helvetica, Arial, system-ui, "Segoe UI",  sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";}
 
-@font-face {font-family: 'ManifoldDSA-Regular';src: url('webfonts/ManifoldDSA-Regular.eot');src: url('webfonts/ManifoldDSA-Regular.eot?#iefix') format('embedded-opentype'),url('webfonts/ManifoldDSA-Regular.woff2') format('woff2'),url('webfonts/ManifoldDSA-Regular.woff') format('woff'),url('webfonts/ManifoldDSA-Regular.ttf') format('truetype');}
+h1, h2, h3, h4, h5 {font-family: Roboto, Helvetica, Arial, system-ui, "Segoe UI", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";}
 
-@font-face {font-family: 'ManifoldDSA-Light';src: url('webfonts/ManifoldDSA-Light.eot');src: url('webfonts/ManifoldDSA-Light.eot?#iefix') format('embedded-opentype'),url('webfonts/ManifoldDSA-Light.woff2') format('woff2'),url('webfonts/ManifoldDSA-Light.woff') format('woff'),url('webfonts/ManifoldDSA-Light.ttf') format('truetype');}
-
-header, body, p, h1.txt-medium, h2.txt-medium, h3.txt-medium, h4.txt-medium, h5.txt-medium {font-family: ManifoldDSA-Regular, Roboto, Helvetica, Tahoma, Sans-Serif;}
-
-h1, h2, h3, h4, h5 {font-family: ManifoldDSA-ExtraBold, Roboto, Helvetica, Tahoma, Sans-Serif;}
-
-b, strong, h1 small, h2 small, h3 small, h4 small, h5 small, h1.txt-bold, h2.txt-bold, h3.txt-bold, h4.txt-bold, h5.txt-bold {font-family: ManifoldDSA-ExtraBold, Roboto, Helvetica, Tahoma, Sans-Serif;}
+b, strong, h1 small, h2 small, h3 small, h4 small, h5 small, h1.txt-bold, h2.txt-bold, h3.txt-bold, h4.txt-bold, h5.txt-bold, #homepage-1 .homepage-hometitle h4 {font-family: Roboto, Helvetica, Arial, system-ui, "Segoe UI", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; font-weight: 800; font-weight: bold;}
 
 /*********************
 NAVIGATION CHANGES
@@ -26,12 +20,17 @@ NAVIGATION CHANGES
 	padding-top: 46px;
 }
 
-#top-bar-menu, #top-bar-menu ul {
-	background-color: #ec1f27;
+#top-bar-menu {
+	background-color: white;
+	box-shadow: 0px 4px 2px rgba(0,0,0,0.15);
+}
+
+.top-bar ul.menu {
+	background-color: transparent;
 }
 
 #top-bar-menu a {
-	color: white;
+	color: #F60E33;
 }
 
 #top-bar-menu a.top-bar-logo-link, #top-bar-menu a.top-bar-logo-link:hover {
@@ -41,6 +40,11 @@ NAVIGATION CHANGES
 
 #top-bar-menu a.top-bar-site-name, #top-bar-menu a.top-bar-site-name:hover {
 	background-color: transparent;
+	color: #F60E33;
+}
+
+#top-bar-menu a.top-bar-site-name {
+	padding: 0.7rem 1rem 0.7rem 0.35rem;
 }
 
 .menu a.top-bar-logo-link .top-bar-logo, .menu a.top-bar-logo-link .top-bar-logo:hover {
@@ -59,7 +63,7 @@ NAVIGATION CHANGES
 	    border-color: #fff transparent transparent;
 	}
 	.dropdown.menu.medium-horizontal>li.is-dropdown-submenu-parent.active>a::after {
-		border-color: #ec1f27 transparent transparent;
+		border-color: #F60E33 transparent transparent;
 	}
 	#sidebar1 {
 		margin-top: 80vh;
@@ -70,7 +74,7 @@ NAVIGATION CHANGES
 
 #top-bar-menu .menu .active > a {
 	background-color: white;
-	color: #ec1f27;
+	color: #F60E33;
 	border-color: #fff transparent transparent;
 }
 
@@ -85,10 +89,10 @@ NAVIGATION CHANGES
 
 #top-bar-menu .is-dropdown-submenu a {
 	background-color: white;
-	color: #ec1f27;
+	color: #F60E33;
 }
 #top-bar-menu .is-dropdown-submenu a:hover {
-	background-color: #ec1f27;
+	background-color: #F60E33;
 	color: white;
 }
 
@@ -101,29 +105,30 @@ NAVIGATION CHANGES
 }
 
 .off-canvas .menu.vertical .menu-item a {
-	color: #ec1f27;
-	border-left: 1px solid #ec1f27;
-	border-bottom: 1px solid #ec1f27;
+	color: #F60E33;
+	border-left: 1px solid #F60E33;
+	border-bottom: 1px solid #F60E33;
 	padding: 0 0 0.5rem 0.5rem;
 	margin: 0 0 0.5rem 0;
 }
 
 .accordion-menu .is-accordion-submenu-parent:not(.has-submenu-toggle)>a::after {
-	border-color: #ec1f27 transparent transparent;
+	border-color: #F60E33 transparent transparent;
 }
 
 /*********************
 BUTTON STYLES
 *********************/
 .button {
-	color: #ec1f27;
-	background-color: white;
-	border: 1px solid;
+	color: white;
+	background-color: #F60E33;
+	border: 1px solid #F60E33;
+	box-shadow: 0px 2px 6px rgba(0,0,0,0.15);
 }
 
 .button:focus, .button:hover {
-	color: white;
-	background-color: #ec1f27;
+	color: #F60E33;
+	background-color: white;
 }
 
 /*********************
@@ -137,12 +142,12 @@ POSTS & CONTENT STYLES
   color: #999; }
 
 body .article-header h1, body .article-header h2, body .article-header h3, body .article-header h4, body .article-header h5 {
-	font-family: ManifoldDSA-ExtraBold, Helvetica, Tahoma, Sans-Serif;
+	font-family: Roboto, Helvetica, Arial, system-ui, "Segoe UI", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 	color: #111;
 }
 
 body .article-header h1 {
-  font-size: 4rem;
+  font-size: 3rem;
   margin: 0;
 }
 
@@ -152,19 +157,17 @@ body .entry-content p {
 }
 
 .article-header .post-categories a {
-	border-left: 1px solid;
-	border-bottom: 1px solid;
-	color: #ec1f27;
-	padding: 0 0 0.5rem 0.5rem;
-	margin-right: 0.5rem;
-	-webkit-transition: background-color .25s ease-out,color .25s ease-out;
+	border: 1px solid #F60E33;
+    color: #F60E33;
+    padding: 0.5em;
+    margin-right: 0.5rem;
+    -webkit-transition: background-color .25s ease-out,color .25s ease-out;
     transition: background-color .25s ease-out,color .25s ease-out;
-    border-color: #ff9fa7;
 }
 
 .article-header .post-categories a:hover {
 	color: white;
-	background-color: #ec1f27;
+	background-color: #F60E33;
 }
 
 .article-header .post-categories {
@@ -176,15 +179,12 @@ body .entry-content p {
 }
 
 .article-header .byline {
-	border-left: 1px solid;
-	border-bottom: 1px solid;
-	padding: 0 0 0.5rem 0.5rem;
+	padding: 0.5rem 0rem;
 	color: #999;
-	border-color: #ddd;
 }
 
 .article-header a {
-	color: #ec1f27;;
+	color: #F60E33;
 }
 
 .entry-content .post-caption {
@@ -531,24 +531,92 @@ COMMENT FORM STYLES
 HOMEPAGE - 1
 *********************/
 #homepage-1.homepage-backdrop {
-  padding: 8rem 0 0 0;
+  padding: 6rem 0 0 0;
+  min-height: 100vh;
+}
+
+#homepage-1 .homepage-hometitle h4.widgettitle {
+  color: white;
+  text-shadow: 0px 6px 3px rgba(0,0,0,0.15);
+}
+
+ @media print, screen and (min-width: 40em) {
+ 	#homepage-1 .homepage-hometitle h4.widgettitle {
+ 		font-size: 7rem;
+ 	}
+ }
+
+ @media print, screen and (max-width: 39.9em) {
+  	#homepage-1 .homepage-hometitle h4.widgettitle {
+  		font-size: 5rem;
+  	}
+ }
+
+#homepage-1 .homepage-hometitle p {
+	color: white;
+	font-size: 1.35rem;
+}
+
+#homepage-1 .homepage-hometitle p a {
+	color: #F60E33;
+	background-color: white;
+	padding: 0 0.5em;
 }
 
 #homepage-1 .homebar {
-  border: 1px solid #ddd;
-  background-color: #fefefe;
-  margin-bottom: -1.5rem;
+	color: #677086;
+	border: 1px solid #ddd;
+	box-shadow: 0px 6px 3px rgba(0,0,0,0.15);
+  	background: rgb(247,247,250);
+	background: -moz-linear-gradient(90deg, rgba(247,247,250,1) 0%, rgba(234,236,242,1) 100%);
+	background: -webkit-linear-gradient(90deg, rgba(247,247,250,1) 0%, rgba(234,236,242,1) 100%);
+	background: linear-gradient(90deg, rgba(247,247,250,1) 0%, rgba(234,236,242,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f7f7fa",endColorstr="#eaecf2",GradientType=1);
+	margin-bottom: 1.5rem;
+}
+
+#homepage-1 .homebar h4.widgettitle {
+	color: #21262C;
+	font-size: 2rem;
 }
 
 #homepage-1 .homepage-feature {
   min-height: 33vh;
   border: 1px solid #ddd;
-  background-color: #fefefe;
+  box-shadow: 0px 4px 2px rgba(0,0,0,0.15);
+  color: #677086;
+  background: rgb(247,247,250);
+	background: -moz-linear-gradient(90deg, rgba(247,247,250,1) 0%, rgba(234,236,242,1) 100%);
+	background: -webkit-linear-gradient(90deg, rgba(247,247,250,1) 0%, rgba(234,236,242,1) 100%);
+	background: linear-gradient(90deg, rgba(247,247,250,1) 0%, rgba(234,236,242,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f7f7fa",endColorstr="#eaecf2",GradientType=1);
   margin-bottom: 2rem;
 }
 
-.homepage1 .article-header {
-  margin-top: 4rem;
+#homepage-1 .article-header {
+ 	padding:0;
+ 	margin-bottom: 0.5rem;
+ 	display: block;
+}
+
+#homepage-1 .homepage-feature .entry-content p {
+	color: #677086;
+	font-size: 1rem;
+}
+
+#homepage-1 .article-header h1.page-title {
+ 	font-size: 2rem;
+ 	font-weight: 800;
+}
+
+#homepage-1 .article-header h1.page-title div.grid-container {
+ 	padding:0;
+ 	margin: 0;
+ 	display: block;
+}
+
+.page-template-template-homepage-1 footer {
+	margin-top: 3rem;
 }
 
 /*********************
@@ -566,29 +634,52 @@ SIDEBARS & ASIDES
 /*********************
 ARCHIVE STYLES
 *********************/
-.archive-grid a {
-  color: #ec1f27; }
+.archive-card a {
+  color: #F60E33; }
 
-.archive-grid h3 a, .archive-index .article-header .article-title a {
+.archive-card h3 a, .archive-index .article-header .article-title a {
   	color: #000;
 }
 
-.archive-grid .cell.panel {
-	border-left: 1px solid #ddd;
-	border-bottom: 1px solid #ddd;
+.archive-card .cell.panel {
+	color: #93A1AF;
+    border: 1px solid #ddd;
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.15);
+    background: rgb(247,247,250);
+    background: -moz-linear-gradient(90deg, rgba(247,247,250,1) 0%, rgba(234,236,242,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(247,247,250,1) 0%, rgba(234,236,242,1) 100%);
+    background: linear-gradient(90deg, rgba(247,247,250,1) 0%, rgba(234,236,242,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f7f7fa",endColorstr="#eaecf2",GradientType=1);
+    margin-bottom: 1.5rem;
+    padding: 1rem;
 }
 
-.archive-grid .article-header {
+.archive-card .article-header {
   	margin-bottom: 0;
   	padding: 0;
 }
 
-.archive-grid .article-header .byline {
+.archive-card .article-header h3 {
+	font-size: 1.25rem;
+	margin: 0.25rem 0;
+}
+
+.archive-card .article-header .byline {
 	border-left: 0px;
 	border-bottom: 0px;
 	padding: 0;
 }
 
+.archive.category .off-canvas-content {
+	background: url(../images/ancom-bg.svg) center center;
+    background-attachment: fixed;
+    background-size: cover;
+    min-height:90vh;
+}
+
+.archive.category footer p {
+  color: white;
+}
 
 /*********************
 FOOTER STYLES
@@ -613,18 +704,18 @@ WIDGET STYLES
 
 .widget.widget_recent_entries ul li a {
 	display: block;
-	border-left: 1px solid #ec1f27;
-	border-bottom: 1px solid #ec1f27;
-	padding: 0 0 0.5rem 0.5rem;
-	color: #ec1f27;
-	margin-bottom: 0.5rem;
-	-webkit-transition: background-color .25s ease-out,color .25s ease-out;
+    border-left: 0.5em solid #F60E33;
+    padding: 0.25em 0 0.25em 0.75em;
+    color: #F60E33;
+    margin-bottom: 0.5rem;
+    -webkit-transition: background-color .25s ease-out,color .25s ease-out;
     transition: background-color .25s ease-out,color .25s ease-out;
-    border-color: #ff9fa7;
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.15);
+    background: #F7F7FA;
 }
 
 .widget.widget_recent_entries ul li a:hover {
-	background-color: #ec1f27;
+	background-color: #F60E33;
 	color: white;
 }
 

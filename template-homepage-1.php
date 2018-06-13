@@ -6,27 +6,33 @@ Template Name: Homepage - 1
 get_header(); ?>
 
 
-	<div id="homepage-1" class="homepage-backdrop grid-x grid-margin-x"  style="background-image: url('<?php if ( has_post_thumbnail() ) { the_post_thumbnail_url( 'full' ); } else { echo ''; } ?> '); background-size: cover;">
+	<div id="homepage-1" class="homepage-backdrop grid-x grid-margin-x">
+
+		<style>.off-canvas-content { background-image: url('<?php if ( has_post_thumbnail() ) { the_post_thumbnail_url( 'full' ); } else { echo '#fff'; } ?> '); background-size: cover;}</style>
 
 		<div class="homepage-feature-container small-12 medium-12 large-12">
 			<div class="grid-container">
 				<div class="grid-x grid-margin-x grid-padding-x">
-					<div class="small-12 medium-4 large-6 cell homepage-blankspace">
-						&nbsp;
-					</div>
-					<div class="small-12 medium-8 large-6 cell homepage-feature">
-						<!-- Homebar 2 -->
-						<?php if ( is_active_sidebar( 'homefeature' ) ) : ?>
-							<?php dynamic_sidebar( 'homefeature' ); ?>
+					<div class="small-12 medium-6 large-8 cell homepage-hometitle">
+						<?php if ( is_active_sidebar( 'hometitle' ) ) : ?>
+							<?php dynamic_sidebar( 'hometitle' ); ?>
 						<?php else : ?>
 
 							<!-- This content shows up if there are no widgets defined in the backend. -->
 												
 							<div class="alert help">
-								<p><?php _e( 'Please activate Homepage Feature Widget.', 'jointswp' );  ?></p>
+								<p><?php _e( 'Please activate Homepage Title Widget.', 'jointswp' );  ?></p>
 							</div>
 
 						<?php endif; ?>
+					</div>
+					<div class="small-12 medium-6 large-4 cell homepage-feature">
+						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+							<header class="article-header">
+								<h1 class="page-title"><div class="grid-container"><?php the_title(); ?></div></h1>
+							</header>
+			    		<?php get_template_part( 'parts/loop', 'page-full' ); ?>
+			    		<?php endwhile; endif; ?>	
 					</div>
 				</div>
 			</div>
@@ -93,26 +99,5 @@ get_header(); ?>
 		</div>
 		</div><!-- end .homepage-widgets -->
 	</div> <!-- end #homepage-backdrop" -->
-
-	<div class="content grid-container homepage1">
-	
-		<div class="inner-content grid-x grid-margin-x grid-padding-x">
-	
-		    <main class="main small-12 large-12 medium-12 cell" role="main">
-				
-				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-
-					<header class="article-header">
-							<h1 class="page-title"><div class="grid-container"><?php the_title(); ?></div></h1>
-					</header>
-			    	<?php get_template_part( 'parts/loop', 'page-full' ); ?>
-			    
-			    <?php endwhile; endif; ?>							
-			    					
-			</main> <!-- end #main -->
-		    
-		</div> <!-- end #inner-content -->
-
-	</div> <!-- end #content -->
 
 <?php get_footer(); ?>
